@@ -43,35 +43,71 @@ if(localStorage.getItem('user')===null)
         $(".item__price").each(function (i) {
             $(this).html(data[i].address.city);
         });
-        
-        $('.offers__item').each(function (i){
-            $(this).click(function(){
-              $("#popup__item").show();
-              $('#user__details').html(`<h1>Name: ${data[i].name}</h1> <p>Email: ${data[i].email}</p> 
+
+        $('.offers__item').each(function (i) {
+            $(this).click(function () {
+                $("#popup__item").show();
+                $('#user__details').html(`<h1>Name: ${data[i].name}</h1> <p>Email: ${data[i].email}</p> 
               <p>Phone: ${data[i].phone}</p> <p>Web: ${data[i].website}</p> <p> Username: ${data[i].username} <br> </br> <h2>Adress:</h2>
                <p>Street: ${data[i].address.street} </p> <p> Suite: ${data[i].address.suite}</p> <p>City: ${data[i].address.city}</p> <p> Zipcode: ${data[i].address.zipcode} </p>
                <br> </br> <h2> Company: </h2> <p>Name: ${data[i].company.name}</p> <p> Phrase: ${data[i].company.catchPhrase}
                <p> Bs: ${data[i].company.bs} </p>`
-              );
-              $("#popup__item").scroll(function() {
-                if($(this).scrollTop() >75) 
-                $('#scroll__to__top__button').css("display","block");
-                else
-                $('#scroll__to__top__button').css("display","none");
-
-                
-             });
-              $('#scroll__to__top__button').click(function(){
-                $('#popup__item').scrollTop(0);
-
-              })
+                );
+                $("#popup__item").scroll(function () {
+                    if ($(this).scrollTop() > 75)
+                        $('#scroll__to__top__button').css("display", "block");
+                    else
+                        $('#scroll__to__top__button').css("display", "none");
+                });
+                $('#scroll__to__top__button').click(function () {
+                    $('#popup__item').scrollTop(0);
+                })
             });
-            $('#close__button').click(function(){
-              $("#popup__item").hide();
-  
+            $('#close__button').click(function () {
+                $("#popup__item").hide();
+
             })
-      });
+        });
      
+        $.get('https://jsonplaceholder.typicode.com/users/1/posts', function (postData) {
+            console.log(postData);
+            
+            $('.posts__button').each(function (i) {
+                $(this).click(function (event) {
+                   let array =  postData.filter(x => x.userId === i+1);
+                  
+                    array.forEach(function (item) {
+                        $("#user__details").append("<li>" + item.title + "</li>");
+                    });
+                    $("#popup__item").show();
+
+                    $("#popup__item").scroll(function () {
+                        if ($(this).scrollTop() > 75)
+                            $('#scroll__to__top__button').css("display", "block");
+                        else
+                            $('#scroll__to__top__button').css("display", "none");
+                    });
+                    $('#scroll__to__top__button').click(function () {
+                        $('#popup__item').scrollTop(0);
+                    })
+
+
+
+                    event.stopPropagation();
+                });
+
+                $('#close__button').click(function () {
+                    $("#popup__item").hide();
+                    $('#user__details').html('');
+
+
+
+
+                })
+            })
+
+        });
+  
 
       });
 

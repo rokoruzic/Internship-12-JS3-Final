@@ -120,8 +120,12 @@
         border:none;
         outline: none;
         background-color:transparent;
-        color: black;
+        color: #aaaaaa;
         cursor: pointer;
+  }
+  #scroll__to__top__button{
+      color:black;
+      cursor: pointer;
   }
   
 
