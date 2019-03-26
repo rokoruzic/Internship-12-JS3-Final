@@ -17,7 +17,7 @@ body {
 
 }
 #registration{
-    display:block;
+    display:none;
 }
 #login{
     display: none;
