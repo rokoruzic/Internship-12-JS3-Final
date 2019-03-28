@@ -513,6 +513,8 @@
         <div class="offers__item">
           <img class="item__img" src="assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             Wrangler small logo crew neck t-shirt in white
           </p>
@@ -522,6 +524,8 @@
         <div class="offers__item">
           <img class="item__img" src="assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             Wrangler small logo crew neck t-shirt in white
           </p>
@@ -531,6 +535,8 @@
         <div class="offers__item">
           <img class="item__img" src="assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             Wrangler small logo crew neck t-shirt in white
           </p>
@@ -540,6 +546,7 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
           <p class="item__paragraph">
             Wrangler logo chest stripe rugby polo in blue/white
           </p>
@@ -549,6 +556,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             Wrangler kobel retro large logo ringer t-shirt in white
           </p>
@@ -558,6 +567,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">Lyle & Scott polo in burgundy</p>
           <span class="item__price">£44.12</span>
         </div>
@@ -565,6 +576,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             <span class="item__paragraph__brand">COLLUSION</span> Unisex long
             sleeve t-shirt with graphic print in neon green
@@ -575,6 +588,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             <span class="item__paragraph__brand">ASOS DESIGN</span> Disney
             oversized t-shirt with rainbow
@@ -585,6 +600,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button  type="button"  class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+
           <p class="item__paragraph">
             <span class="item__paragraph__brand">COLLUSION</span> Unisex
             oversized t-shirt with back print
@@ -595,6 +612,8 @@
         <div class="offers__item">
           <img class="item__img" src="./assets/images/offer.jpg" alt="Offer" />
           <button type="button" class="posts__button">Posts</button>
+          <button type="button" class="new__post__button">Create new post</button>
+          
           <p class="item__paragraph">
             <span class="item__paragraph__brand">ASOS DESIGN</span> Mickey
             reloxed t-shirt with retro print
@@ -607,7 +626,7 @@
   </div>
 
 
-<form>
+
   <div id = "registration">
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
@@ -655,12 +674,25 @@
       </div>
     </div>
   </div>
-</form>
+
 <div id="popup__item">
   <div id="popup__item__content">
-    <span id="close__button">&times;</span>
-    <button id = "scroll__to__top__button"> &#94;</button>
+    <span class="close__button">&times;</span>
+    <button class = "scroll__to__top__button"> &#94;</button>
     <p id="user__details"></p>
+  </div>
+
+</div>
+
+<div id="submit__post">
+  <div id="submit__post__content">
+    <span class="close__button">&times;</span>
+    <h1>Create new post</h1>
+    <input id="post__title" class="form-control" type="text" placeholder="Post title">
+    <div class="form-group">
+      <textarea class="form-control" id="post__body" rows="3" placeholder="Post text"></textarea>
+    </div>
+    <button id = "submit__post__button" type="button" class="btn btn-primary">Submit post</button>
   </div>
 
 </div>

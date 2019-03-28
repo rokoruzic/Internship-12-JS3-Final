@@ -75,7 +75,7 @@
     opacity: 0;
     transition: opacity 200ms, top 200ms;
 }
-#popup__item {
+#popup__item,#submit__post {
     display: none; 
   position: fixed; 
   z-index: 1; 
@@ -88,7 +88,7 @@
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
   }
-  #popup__item__content {
+  #popup__item__content,#submit__post__content {
     background-color: white;
     margin: auto;
     padding: 20px;
@@ -96,21 +96,21 @@
     width: 50%;
   }
   #user__details{
-      font-size: 25px;
+      font-size: 30px;
   }
-  #close__button {
+  .close__button {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  #close__button:hover{
+  .close__button:hover{
     color: #000;
     cursor: pointer;
 
   }
-  #scroll__to__top__button{
+  .scroll__to__top__button{
         display: none;
         position: fixed;
         bottom: 1%;
@@ -123,9 +123,12 @@
         color: #aaaaaa;
         cursor: pointer;
   }
-  #scroll__to__top__button{
+  .scroll__to__top__button{
       color:black;
       cursor: pointer;
+  }
+  .new__post__button{
+     float: right;
   }
   
 
