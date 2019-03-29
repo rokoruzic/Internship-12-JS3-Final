@@ -130,7 +130,133 @@
   .new__post__button{
      float: right;
   }
-  
+  #login__container,#registration__container {
+      display: none;
+    position: fixed;
+    width: 60%;
+    height: 60%;
+    top: 35%;
+    left: 30%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: white;
+    border-radius: 3px;
+    border: 1px solid black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    z-index: 1;
+    
+}
+
+.login__img{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+#loginUsername{
+    position: relative;
+    width: 30%;
+    left:10%;
+    background:pink;
+    top:30px;
+    border-radius: 3px;
+
+    padding-left: 0;
+
+
+}
+#login__username__text{
+    position: relative;
+    width: 30%;
+    padding-left: 0;
+    top: 20px;
+    left:10%;
+
+
+}
+#loginPassword,#inputPassword{
+    position: relative;
+    width: 30%;
+    padding-left: 0;
+    left:10%;
+    background:pink;
+    border-radius: 3px;
+    top: 50px;
+
+}
+#login__password__text,#registration__password__text{
+    position: relative;
+    width: 30%;
+    left:10%;
+    padding-left: 0;
+    top: 40px;
+}
+#signInButton{
+    position: relative;
+    width: 30%;
+    left:10%;
+    top:90px;
+    background:pink;
+    border-radius: 3px;
+    color:black;
+}
+#login__title{
+    left:21%;
+    position: relative;
+    font-size: 30px;
+    top:5px;
+}
+#registration__title{
+    left:21%;
+    position: relative;
+    font-size: 30px;
+    top:5px;
+}
+#registration__username__text{
+    position: relative;
+    width: 30%;
+    padding-left: 0;
+    top: 20px;
+    left:10%;
+}
+#inputUsername{
+    position: relative;
+    width: 30%;
+    left:10%;
+    background:pink;
+    top:30px;
+    border-radius: 3px;
+    padding-left: 0;
+}
+#repeated__password__text{
+    position: relative;
+    top:57px;
+    left:8.5%;
+}
+#inputRepeatedPassword{
+    position: relative;
+    top:65px;
+    left:10%;
+    width:30%;
+    padding-left: 0;
+    border-radius: 3px;
+    background: pink;
+}
+#signUpButton{
+    position: relative;
+    width: 30%;
+    left:10%;
+    top:90px;
+    background:pink;
+    border-radius: 3px;
+    color:black;
+}
+#login__background{
+    height: 100%;
+    display: block;
+    width:100%;
+    background: pink;
+}
+
 
 /* 
     Media query 
