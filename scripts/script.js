@@ -5,9 +5,7 @@ if(localStorage.getItem('user')===null)
     else
     $('#login__container').show();
 
-
     $('#signUpButton').click(function () {
-      
         const user = {
             username: $('#inputUsername').val(),
             password: $('#inputPassword').val()
@@ -20,10 +18,17 @@ if(localStorage.getItem('user')===null)
         {
             localStorage.setItem('user',JSON.stringify(user));
             $('#registration__container').hide();
-            $('#login__container').show();
+            if($("#log__checkbox").is(':checked'))
+            {
+                $('.login__background').hide();
+                $('#users').show();
+            }
+            else
+                $('#login__container').show();
 
         }
     });
+
     $('#signInButton').click(function () {
         const userInfo = JSON.parse( localStorage.getItem('user') );
         if(userInfo.username !== $('#loginUsername').val() || userInfo.password !== $('#loginPassword').val())
@@ -31,15 +36,20 @@ if(localStorage.getItem('user')===null)
         else
         {
         $('#login__container').hide();
+        $('.login__background').hide();
         $('#users').show();
         }
+        $('#loginPassword').val('');
     });
+    $('#log__off__button').click(function(){
+        $('#users').hide();
+        $('#login__container').show();
+        $('.login__background').show();
+
+    })
     $.get('https://jsonplaceholder.typicode.com/users', function (userData) {
-        console.log(userData);
         $('.item__paragraph').each(function (i) {
             $(this).html(`<br>${userData[i].name}</br> ${userData[i].email}`);
-
-         
         });
 
         $('.item__price').each(function (i) {
@@ -75,10 +85,7 @@ if(localStorage.getItem('user')===null)
 
             })
         });
-
-     
         $.get('https://jsonplaceholder.typicode.com/users/1/posts', function (postData) {
-            console.log(postData);
             $('.posts__button').each(function (i) {
                 $(this).click(function (event) {
                     let userPosts = postData.filter(x => x.userId == $('.offers__item').eq(i).attr('userId'));
@@ -117,7 +124,6 @@ if(localStorage.getItem('user')===null)
                 $('#submit__post').hide();
                 $('#post__title').val('');
                 $('#post__body').val('');
-
             })
         });
 
@@ -129,7 +135,7 @@ if(localStorage.getItem('user')===null)
                 userId: $('#submit__post').attr('userId')
 
             };
-            if(post.title.length<1 || post.body.length<1)
+            if(!post.title.trim() || !post.body.trim())
             alert('Title and/or body musnt be empty');
             else
             {
@@ -140,21 +146,17 @@ if(localStorage.getItem('user')===null)
                 data: JSON.stringify(post),
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
-                success: function(){
+                success: function(data){
                     alert('Success!')
                     ;},
-                failure: function() {
-                    alert('Failure!');
+                error: function(){
+                    alert('Failure');
                 }
             });
-           
             $('#post__title').val('');
             $('#post__body').val('');
-
         }
         });
-
-
     });
 
 });

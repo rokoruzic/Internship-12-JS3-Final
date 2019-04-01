@@ -14,6 +14,7 @@
   <div id = 'users'>
   <body>
     <header>
+      <button type="button" id = 'log__off__button' class="btn btn-success">Log off</button>
       <div class='header__container'>
         <div class='container__search-filter'>
           <span class='search-filter__text'>Sort</span>
@@ -625,56 +626,57 @@
       
   </div>
 
-
-<div id='registration__container'>
-    <img class='login__img' src='./assets/images/miaWallace.jpg' alt='miaWallace' />
-    <p id = 'registration__title'>Register</p>
-    <label for='inputUsername' id='registration__username__text' class='col-sm-2 col-form-label'>Username:</label>
-      <input  maxlength='10' class='form-control' id='inputUsername' placeholder='Username'>
-    <label for='inputPassword' id='registration__password__text' class='col-sm-2 col-form-label'>Password:</label>
+  <div class='login__background'>
+    <div id='registration__container'>
+      <img class='login__img' src='./assets/images/miaWallace.jpg' alt='miaWallace' />
+      <p id='registration__title'>Register</p>
+      <label for='inputUsername' id='registration__username__text' class='col-sm-2 col-form-label'>Username:</label>
+      <input maxlength='10' class='form-control' id='inputUsername' placeholder='Username'>
+      <label for='inputPassword' id='registration__password__text' class='col-sm-2 col-form-label'>Password:</label>
       <input type='password' maxlength='10' class='form-control' id='inputPassword' placeholder='Password'>
-    <label for='inputPassword3'id='repeated__password__text' class='col-sm-2 col-form-label'>Repeat:</label>
-      <input type='password'  minlength='5' maxlength='10' class='form-control' id='inputRepeatedPassword' placeholder='Repeat password'>
-      <button id = 'signUpButton' type='button' class='btn btn-primary'>Sign up</button>
-</div>
-
-<div id='login__background'></div>
-<div id='login__container'>
-    <img class='login__img' src='./assets/images/miaWallace.jpg' alt='miaWallace' />
-  <p id = 'login__title'>Login</p>
-      <label for='inputUsername'id='login__username__text' class='col-sm-2 col-form-label'>Username:</label>
-        <input maxlength='10' class='form-control' id='loginUsername' placeholder='Username'>
-      <label for='inputPassword' id = 'login__password__text' class='col-sm-2 col-form-label'>Password:</label>
-        <input type='password'  maxlength='10' class='form-control' id='loginPassword' placeholder='Password'>
-        <button id = 'signInButton' type='button' class='btn btn-primary'>Sign in</button>
-  </div>
-</div>
-</div>
-
-<div id='popup__item'>
-  <div id='popup__item__content'>
-    <span class='close__button'>&times;</span>
-    <button class = 'scroll__to__top__button'> &#94;</button>
-    <p id='user__details'></p>
-  </div>
-
-</div>
-
-
-<div id='submit__post'>
-  <div id='submit__post__content'>
-    <span class='close__button'>&times;</span>
-    <h1>Create new post</h1>
-    <input id='post__title' class='form-control' type='text' placeholder='Post title'>
-    <div class='form-group'>
-      <textarea class='form-control' id='post__body' rows='3' placeholder='Post text'></textarea>
+      <label for='inputPassword3' id='repeated__password__text' class='col-sm-2 col-form-label'>Repeat:</label>
+      <input type='password' minlength='5' maxlength='10' class='form-control' id='inputRepeatedPassword'
+        placeholder='Repeat password'>
+      <input type="checkbox" id='log__checkbox' value="Login"> <span id='log__checkbox__text'>Log me in</span>
+      <button id='signUpButton' type='button' class='btn btn-primary'>Sign up</button>
     </div>
-    <button id = 'submit__post__button' type='button' class='btn btn-primary'>Submit post</button>
   </div>
-
-</div>
-
   
+  <div class='login__background'>
+    <div id='login__container'>
+      <img class='login__img' src='./assets/images/miaWallace.jpg' alt='miaWallace' />
+      <p id='login__title'>Login</p>
+      <label for='inputUsername' id='login__username__text' class='col-sm-2 col-form-label'>Username:</label>
+      <input maxlength='10' class='form-control' id='loginUsername' placeholder='Username'>
+      <label for='inputPassword' id='login__password__text' class='col-sm-2 col-form-label'>Password:</label>
+      <input type='password' maxlength='10' class='form-control' id='loginPassword' placeholder='Password'>
+      <button id='signInButton' type='button' class='btn btn-primary'>Sign in</button>
+    </div>
+  
+  </div>
+  
+  <div id='popup__item'>
+    <div id='popup__item__content'>
+      <span class='close__button'>&times;</span>
+      <button class='scroll__to__top__button'> &#94;</button>
+      <p id='user__details'></p>
+    </div>
+  
+  </div>
+  
+  
+  <div id='submit__post'>
+    <div id='submit__post__content'>
+      <span class='close__button'>&times;</span>
+      <h1>Create new post</h1>
+      <input id='post__title' class='form-control' type='text' placeholder='Post title'>
+      <div class='form-group'>
+        <textarea class='form-control' id='post__body' rows='3' placeholder='Post text'></textarea>
+      </div>
+      <button id='submit__post__button' type='button' class='btn btn-primary'>Submit post</button>
+    </div>
+  
+  </div>
   </body>
   <script src = './scripts/jquery-3.3.1.js'></script>
 <script src='./scripts/script.js'></script>

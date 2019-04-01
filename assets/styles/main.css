@@ -96,7 +96,7 @@
     width: 50%;
   }
   #user__details{
-      font-size: 30px;
+      font-size: 15px;
   }
   .close__button {
     color: #aaaaaa;
@@ -244,19 +244,33 @@
 #signUpButton{
     position: relative;
     width: 30%;
-    left:10%;
-    top:90px;
+    top:100px;
+    right: 0%;
     background:pink;
     border-radius: 3px;
     color:black;
 }
-#login__background{
+.login__background{
     height: 100%;
-    display: block;
+    z-index: -1;
     width:100%;
     background: pink;
 }
-
+#log__checkbox{
+    position: relative;
+    left:10%;
+    top:70px;
+}
+#log__checkbox__text{
+    position: relative;
+    left:10.1%;
+    top:68px;
+}
+#log__off__button{
+    position: fixed;
+    top:0%;
+    right: 0%;
+}
 
 /* 
     Media query 
